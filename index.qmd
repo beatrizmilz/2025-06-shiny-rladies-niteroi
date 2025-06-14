@@ -1,0 +1,129 @@
+---
+title: "Introdução ao Shiny"
+subtitle: "Construindo Dashboards Interativos com R"
+author: "Beatriz Milz"
+local: "R-Ladies Niterói"
+date: "2025-06-17"
+date-format: "DD/MM/YYYY"
+format: 
+  rladies-revealjs:
+    footer: "[beamilz.com](https://beamilz.com) > talks and teaching > introdução ao Shiny"
+    slide-number: c/t
+    show-slide-number: all
+    code-link: true
+    code-copy: true
+    scrollable: true
+incremental: false
+editor: 
+  markdown: 
+    wrap: 72
+execute: 
+  echo: true
+---
+
+## Beatriz Milz
+
+-   Doutora em Ciência Ambiental no IEE/USP
+-   Atualmente: Estágio pós-doutoral na UFABC
+-   Co-organizadora da [R-Ladies São Paulo](https://rladies-sp.org)
+-   *Software peer review editor* na [rOpenSci](https://ropensci.org/)
+-   [GitHub Star](https://stars.github.com/profiles/beatrizmilz/)
+
+<center>[![](images/logo-rladies.png){fig-align="center"
+width="20%"}](https://rladies-sp.org/)
+[![](images/ropensci.png){fig-align="center"
+width="20%"}](https://ropensci.org/)
+[![](images/github-stars-logo_Color.webp){fig-align="center"
+width="25%"}](https://stars.github.com/profiles/beatrizmilz/)</center>
+
+
+## {background-color="white" background-image="images/linha-do-tempo.jpg" background-size="contain"}
+
+::: {.footer}
+
+:::
+
+
+## Ciclo da Ciência de Dados
+
+![](images/environmental-data-science-r4ds-general.png){fig-align="center"}
+
+::: footer
+Fonte: Allison Horst (@allison_horst).
+:::
+
+
+## Conceito importante: páginas da internet
+
+![](images/estrutura-pagina.webp){fig-align="center"}
+
+::: footer
+Fonte: [Free Code Camp - The relationship between HTML, CSS and JavaScript explained by building a city](https://www.freecodecamp.org/news/the-relationship-between-html-css-and-javascript-explained-by-building-a-city-a73a69c6343/)
+:::
+
+## Conceito importante: Interatividade
+
+![](images/interatividade.png){fig-align="center"}
+
+::: incremental
+-   É interessante conseguir identificar a interatividade que vem do JavaScript e a interatividade feita com código em R.
+:::
+
+::: footer
+Fonte: Elaborado pela autora.
+:::
+
+## RMarkdown e Quarto
+
+-   O arquivo gerado é **estático**, não depende de uma sessão de R para ser aberto.
+
+-   Os elementos adicionados podem ter algum nível de interatividade (como mapas, gráficos, tabelas) utilizando bibliotecas em JavaScript.
+
+## Shiny
+
+-   Shiny é um pacote em R para criar **dashboards interativos** com R.
+
+- Melhor dos mundos para interatividade: podemos utilizar elementos que são interativos devido ao JS, e também podemos apresentar conteúdos interativos utilizando R.
+
+- Necessita de uma sessão de R para que seja aberto!
+
+- É possível fazer dashboards para usos científicos. Ex: Zootraits ([dashboard](https://ecofun.shinyapps.io/zootraits/) e [artigo](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.11334))
+
+![](images/shiny.png){fig-align="center" width="50%"}
+
+::: footer
+Fonte: <https://rstudio.com/shiny/>
+:::
+
+## Shiny - Servidor e Interface do Usuário
+
+![](images/esquema_ui_servidor.png){fig-align="center" width="50%"}
+
+::: footer
+Fonte: <https://curso-r.github.io/main-dashboards/slides/02-shiny-introducao.html>
+:::
+
+
+
+
+# Encerramento
+
+## Materiais para estudar mais: Exemplos em R
+
+- [Livro Mastering Shiny - Hadley Wickham](https://mastering-shiny.org) (em inglês)
+
+
+## Muito obrigada!
+
+
+- Email: [milz.bea@gmail.com](mailto:milz.bea@gmail.com)
+- GitHub: [@beatrizmilz](https://github.com/beatrizmilz)
+- Instagram: [@dadoseambiente](https://www.instagram.com/dadoseambiente/)
+- Youtube: [@beamilz](https://www.youtube.com/@beamilz)
+
+
+
+
+Na minha página pessoal, você encontra [meus contatos](https://beamilz.com/about-pt), e também [palestras (anteriores e futuras)](https://beamilz.com/content).
+
+Slides feitos com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Você pode consultar o código [aqui](https://github.com/beatrizmilz/2025-03-pyladies-odd-geobr/blob/main/index.qmd).
