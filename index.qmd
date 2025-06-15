@@ -43,6 +43,25 @@ width="25%"}](https://stars.github.com/profiles/beatrizmilz/)</center>
 
 :::
 
+## Dedicatória
+
+
+
+[Will (William Amorim)](https://wamorim.com/profissional/)
+
+![](images/useR.png){fig-align="center" width="30%"}
+
+## Plano para hoje
+
+- Conceitos importantes para entender o Shiny
+
+- O que é o Shiny?
+
+- Estrutura básica
+
+- Exemplo com prática usando ChatGPT
+
+- Disponilibização do app no shinyapps.io
 
 ## Ciclo da Ciência de Dados
 
@@ -79,9 +98,15 @@ Fonte: Elaborado pela autora.
 
 -   Os elementos adicionados podem ter algum nível de interatividade (como mapas, gráficos, tabelas) utilizando bibliotecas em JavaScript.
 
+- Exemplos:
+   - Mapas: [Leaflet](https://rstudio.github.io/leaflet/), [tmap](https://r-tmap.github.io/tmap/)
+   - Gráficos: [Plotly](https://plotly.com/r/), [echarts4r](https://echarts4r.john-coene.com/)
+   - Tabelas: [DT](https://rstudio.github.io/DT/), [reactable](https://glin.github.io/reactable/)
+   
+
 ## Shiny
 
--   Shiny é um pacote em R para criar **dashboards interativos** com R.
+- Shiny é um pacote em R para criar **dashboards interativos** com R.
 
 - Melhor dos mundos para interatividade: podemos utilizar elementos que são interativos devido ao JS, e também podemos apresentar conteúdos interativos utilizando R.
 
@@ -111,6 +136,10 @@ Fonte: <https://curso-r.github.io/main-dashboards/slides/02-shiny-introducao.htm
 ## Materiais para estudar mais: Exemplos em R
 
 - [Livro Mastering Shiny - Hadley Wickham](https://mastering-shiny.org) (em inglês)
+
+- [Livro Programando em Shiny - William Amorim](https://programando-em-shiny.curso-r.com/) (em português)
+
+- [Curso de Shiny - Curso-R + William Amorim](https://hotmart.com/pt-br/marketplace/produtos/dashboards-em-shiny/C94374621I) (em português)
 
 
 ## Muito obrigada!
