@@ -6,17 +6,17 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-53f539a478d6ecd1be31ce9fd30fd81c.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.26">
-
-  <meta name="author" content="Beatriz Milz">
-  <title>Introdução ao Shiny</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
-  <style>
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-53f539a478d6ecd1be31ce9fd30fd81c.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.26">
+<meta name="author" content="Beatriz Milz">
+<title>Introdução ao Shiny</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+<style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -28,13 +28,79 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-36eaea79cf5051fb0b1054ff4a590c7a.css">
-  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
+<link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-36eaea79cf5051fb0b1054ff4a590c7a.css">
+<link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -127,8 +193,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#562457" class="quarto-title-block center">
-  <h1 class="title">Introdução ao Shiny</h1>
+<section id="title-slide" data-background-color="#562457" class="quarto-title-block center"><h1 class="title">Introdução ao Shiny</h1>
   <p class="subtitle">Construindo Dashboards Interativos com R</p>
 
 <div class="quarto-title-authors">
@@ -140,57 +205,45 @@ Beatriz Milz
 </div>
 
   <p class="date">17/06/2025</p>
-</section>
-<section id="beatriz-milz" class="slide level2">
-<h2>Beatriz Milz</h2>
+</section><section id="beatriz-milz" class="slide level2"><h2>Beatriz Milz</h2>
 <ul>
 <li>Doutora em Ciência Ambiental no IEE/USP</li>
 <li>Atualmente: Estágio pós-doutoral na UFABC</li>
-<li>Co-organizadora da <a href="https://rladies-sp.org">R-Ladies São Paulo</a></li>
-<li><em>Software peer review editor</em> na <a href="https://ropensci.org/">rOpenSci</a></li>
+<li>Co-organizadora da <a href="https://rladies-sp.org">R-Ladies São Paulo</a>
+</li>
+<li>
+<em>Software peer review editor</em> na <a href="https://ropensci.org/">rOpenSci</a>
+</li>
 <li><a href="https://stars.github.com/profiles/beatrizmilz/">GitHub Star</a></li>
 </ul>
 <center>
 <a href="https://rladies-sp.org/"><img data-src="images/logo-rladies.png" class="quarto-figure quarto-figure-center" style="width:20.0%"></a> <a href="https://ropensci.org/"><img data-src="images/ropensci.png" class="quarto-figure quarto-figure-center" style="width:20.0%"></a> <a href="https://stars.github.com/profiles/beatrizmilz/"><img data-src="images/github-stars-logo_Color.webp" class="quarto-figure quarto-figure-center" style="width:25.0%"></a>
 </center>
-</section>
-<section id="section" class="slide level2" data-background-color="white" data-background-image="images/linha-do-tempo.jpg" data-background-size="contain">
-<h2></h2>
+</section><section id="section" class="slide level2" data-background-color="white" data-background-image="images/linha-do-tempo.jpg" data-background-size="contain"><h2></h2>
 <div class="footer">
 
 </div>
-</section>
-<section id="dedicatória" class="slide level2">
-<h2>Dedicatória</h2>
+</section><section id="dedicatória" class="slide level2"><h2>Dedicatória</h2>
 <p><a href="https://wamorim.com/profissional/">Will (William Amorim)</a></p>
 
-<img data-src="images/useR.png" class="quarto-figure quarto-figure-center r-stretch" style="width:30.0%"></section>
-<section id="plano-para-hoje" class="slide level2">
-<h2>Plano para hoje</h2>
+<img data-src="images/useR.png" class="quarto-figure quarto-figure-center r-stretch" style="width:30.0%"></section><section id="plano-para-hoje" class="slide level2"><h2>Plano para hoje</h2>
 <ul>
 <li><p>Conceitos importantes para entender o Shiny</p></li>
 <li><p>O que é o Shiny?</p></li>
 <li><p>Estrutura básica</p></li>
 <li><p>Exemplo com prática usando ChatGPT</p></li>
 <li><p>Disponilibização do app no shinyapps.io</p></li>
-</ul>
-</section>
-<section id="ciclo-da-ciência-de-dados" class="slide level2">
-<h2>Ciclo da Ciência de Dados</h2>
+</ul></section><section id="ciclo-da-ciência-de-dados" class="slide level2"><h2>Ciclo da Ciência de Dados</h2>
 
 <img data-src="images/environmental-data-science-r4ds-general.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
 <p>Fonte: Allison Horst (<span class="citation" data-cites="allison_horst">@allison_horst</span>).</p>
 </div>
-</section>
-<section id="conceito-importante-páginas-da-internet" class="slide level2">
-<h2>Conceito importante: páginas da internet</h2>
+</section><section id="conceito-importante-páginas-da-internet" class="slide level2"><h2>Conceito importante: páginas da internet</h2>
 
 <img data-src="images/estrutura-pagina.webp" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
 <p>Fonte: <a href="https://www.freecodecamp.org/news/the-relationship-between-html-css-and-javascript-explained-by-building-a-city-a73a69c6343/">Free Code Camp - The relationship between HTML, CSS and JavaScript explained by building a city</a></p>
 </div>
-</section>
-<section id="conceito-importante-interatividade" class="slide level2">
-<h2>Conceito importante: Interatividade</h2>
+</section><section id="conceito-importante-interatividade" class="slide level2"><h2>Conceito importante: Interatividade</h2>
 
 <img data-src="images/interatividade.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
 <li class="fragment">É interessante conseguir identificar a interatividade que vem do JavaScript e a interatividade feita com código em R.</li>
@@ -198,22 +251,22 @@ Beatriz Milz
 <div class="footer">
 <p>Fonte: Elaborado pela autora.</p>
 </div>
-</section>
-<section id="rmarkdown-e-quarto" class="slide level2">
-<h2>RMarkdown e Quarto</h2>
+</section><section id="rmarkdown-e-quarto" class="slide level2"><h2>RMarkdown e Quarto</h2>
 <ul>
 <li><p>O arquivo gerado é <strong>estático</strong>, não depende de uma sessão de R para ser aberto.</p></li>
 <li><p>Os elementos adicionados podem ter algum nível de interatividade (como mapas, gráficos, tabelas) utilizando bibliotecas em JavaScript.</p></li>
-<li><p>Exemplos:</p>
+<li>
+<p>Exemplos:</p>
 <ul>
-<li>Mapas: <a href="https://rstudio.github.io/leaflet/">Leaflet</a>, <a href="https://r-tmap.github.io/tmap/">tmap</a></li>
-<li>Gráficos: <a href="https://plotly.com/r/">Plotly</a>, <a href="https://echarts4r.john-coene.com/">echarts4r</a></li>
-<li>Tabelas: <a href="https://rstudio.github.io/DT/">DT</a>, <a href="https://glin.github.io/reactable/">reactable</a></li>
-</ul></li>
+<li>Mapas: <a href="https://rstudio.github.io/leaflet/">Leaflet</a>, <a href="https://r-tmap.github.io/tmap/">tmap</a>
+</li>
+<li>Gráficos: <a href="https://plotly.com/r/">Plotly</a>, <a href="https://echarts4r.john-coene.com/">echarts4r</a>
+</li>
+<li>Tabelas: <a href="https://rstudio.github.io/DT/">DT</a>, <a href="https://glin.github.io/reactable/">reactable</a>
+</li>
 </ul>
-</section>
-<section id="shiny" class="slide level2">
-<h2>Shiny</h2>
+</li>
+</ul></section><section id="shiny" class="slide level2"><h2>Shiny</h2>
 <ul>
 <li><p>Shiny é um pacote em R para criar <strong>dashboards interativos</strong> com R.</p></li>
 <li><p>Melhor dos mundos para interatividade: podemos utilizar elementos que são interativos devido ao JS, e também podemos apresentar conteúdos interativos utilizando R.</p></li>
@@ -224,40 +277,70 @@ Beatriz Milz
 <img data-src="images/shiny.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"><div class="footer">
 <p>Fonte: <a href="https://rstudio.com/shiny/" class="uri">https://rstudio.com/shiny/</a></p>
 </div>
-</section>
-<section id="shiny---servidor-e-interface-do-usuário" class="slide level2">
-<h2>Shiny - Servidor e Interface do Usuário</h2>
+</section><section><section id="shiny-1" class="title-slide slide level1 center"><h1>Shiny</h1>
+
+</section><section id="componentes-básicos---servidor-e-interface-do-usuário" class="slide level2"><h2>Componentes básicos - Servidor e Interface do Usuário</h2>
 
 <img data-src="images/esquema_ui_servidor.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"><div class="footer">
 <p>Fonte: <a href="https://curso-r.github.io/main-dashboards/slides/02-shiny-introducao.html" class="uri">https://curso-r.github.io/main-dashboards/slides/02-shiny-introducao.html</a></p>
 </div>
-</section>
-<section>
-<section id="encerramento" class="title-slide slide level1 center">
-<h1>Encerramento</h1>
+</section><section id="estrutura-básica-de-um-app-shiny" class="slide level2"><h2>Estrutura básica de um app Shiny</h2>
+<p>Dica: usar um snippet para criar a estrutura básica do app Shiny. Salve o arquivo com a extensão <code>.R</code>.</p>
 
-</section>
-<section id="materiais-para-estudar-mais-exemplos-em-r" class="slide level2">
-<h2>Materiais para estudar mais: Exemplos em R</h2>
+<img data-src="images/snippet.gif" class="r-stretch"></section><section id="estrutura-básica-de-um-app-shiny-1" class="slide level2"><h2>Estrutura básica de um app Shiny</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(shiny)</span>
+<span id="cb1-2"><a href=""></a></span>
+<span id="cb1-3"><a href=""></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb1-4"><a href=""></a>  </span>
+<span id="cb1-5"><a href=""></a>)</span>
+<span id="cb1-6"><a href=""></a></span>
+<span id="cb1-7"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
+<span id="cb1-8"><a href=""></a>  </span>
+<span id="cb1-9"><a href=""></a>}</span>
+<span id="cb1-10"><a href=""></a></span>
+<span id="cb1-11"><a href=""></a><span class="fu">shinyApp</span>(ui, server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Após salvar o arquivo, você pode clicar no botão “Run App” para que o app seja executado.</p>
+<p>Obs: O app gerado por este código estará vazio!</p>
+</section><section id="inputs-e-outputs" class="slide level2"><h2>Inputs e Outputs</h2>
+<ul>
+<li><p><strong>Inputs</strong>: São os elementos que permitem ao usuário interagir com o app. Exemplo: botões, caixas de seleção, campos de texto.</p></li>
+<li><p><strong>Outputs</strong>: São os elementos que exibem informações ao usuário. Exemplo: gráficos, tabelas, textos.</p></li>
+</ul></section><section id="vamos-identificar-os-inputs-e-outputs" class="slide level2"><h2>Vamos identificar os inputs e outputs?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="https://beatriz-milz.shinyapps.io/etec/"><img data-src="images/exemplo-etec.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></a></p>
+</figure>
+</div>
+</section><section id="criando-um-arquivo-de-exemplo" class="slide level2"><h2>Criando um arquivo de exemplo</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><video data-src="images/new-app.mp4" class="quarto-figure quarto-figure-center" style="width:100.0%" controls=""><a href="images/new-app.mp4">Video</a></video></p>
+</figure>
+</div>
+</section></section><section><section id="encerramento" class="title-slide slide level1 center"><h1>Encerramento</h1>
+
+</section><section id="materiais-para-estudar-mais-exemplos-em-r" class="slide level2"><h2>Materiais para estudar mais: Exemplos em R</h2>
 <ul>
 <li><p><a href="https://mastering-shiny.org">Livro Mastering Shiny - Hadley Wickham</a> (em inglês)</p></li>
 <li><p><a href="https://programando-em-shiny.curso-r.com/">Livro Programando em Shiny - William Amorim</a> (em português)</p></li>
 <li><p><a href="https://hotmart.com/pt-br/marketplace/produtos/dashboards-em-shiny/C94374621I">Curso de Shiny - Curso-R + William Amorim</a> (em português)</p></li>
-</ul>
-</section>
-<section id="muito-obrigada" class="slide level2">
-<h2>Muito obrigada!</h2>
+<li><p><a href="https://github.com/curso-r/main-dashboards/tree/master">Materiais da Curso-R</a></p></li>
+</ul></section><section id="muito-obrigada" class="slide level2"><h2>Muito obrigada!</h2>
 <ul>
-<li>Email: <a href="mailto:milz.bea@gmail.com">milz.bea@gmail.com</a></li>
-<li>GitHub: <a href="https://github.com/beatrizmilz"><span class="citation" data-cites="beatrizmilz">@beatrizmilz</span></a></li>
-<li>Instagram: <a href="https://www.instagram.com/dadoseambiente/"><span class="citation" data-cites="dadoseambiente">@dadoseambiente</span></a></li>
-<li>Youtube: <a href="https://www.youtube.com/@beamilz"><span class="citation" data-cites="beamilz">@beamilz</span></a></li>
+<li>Email: <a href="mailto:milz.bea@gmail.com">milz.bea@gmail.com</a>
+</li>
+<li>GitHub: <a href="https://github.com/beatrizmilz">@beatrizmilz</a>
+</li>
+<li>Instagram: <a href="https://www.instagram.com/dadoseambiente/">@dadoseambiente</a>
+</li>
+<li>Youtube: <a href="https://www.youtube.com/@beamilz">@beamilz</a>
+</li>
 </ul>
 <p>Na minha página pessoal, você encontra <a href="https://beamilz.com/about-pt">meus contatos</a>, e também <a href="https://beamilz.com/content">palestras (anteriores e futuras)</a>.</p>
 <p>Slides feitos com <a href="https://quarto.org/docs/presentations/revealjs/index.html">Quarto</a>. Você pode consultar o código <a href="https://github.com/beatrizmilz/2025-03-pyladies-odd-geobr/blob/main/index.qmd">aqui</a>.</p>
 
 </section></section>
-    </div>
+</div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="_extensions/beatrizmilz/rladies/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -265,23 +348,7 @@ Beatriz Milz
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
-  
-
-  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
-  <script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="index_files/libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script><script src="index_files/libs/revealjs/plugin/notes/notes.js"></script><script src="index_files/libs/revealjs/plugin/search/search.js"></script><script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script><script src="index_files/libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -472,8 +539,42 @@ Beatriz Milz
           RevealZoom
         ]
       });
-    </script>
-    <script id="quarto-html-after-body" type="application/javascript">
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -640,6 +741,6 @@ Beatriz Milz
         }
       });
       </script>
-    
+
 
 </body></html>

@@ -36,16 +36,12 @@ width="20%"}](https://ropensci.org/)
 [![](images/github-stars-logo_Color.webp){fig-align="center"
 width="25%"}](https://stars.github.com/profiles/beatrizmilz/)</center>
 
+##  {background-color="white" background-image="images/linha-do-tempo.jpg" background-size="contain"}
 
-## {background-color="white" background-image="images/linha-do-tempo.jpg" background-size="contain"}
-
-::: {.footer}
-
+::: footer
 :::
 
 ## Dedicatória
-
-
 
 [Will (William Amorim)](https://wamorim.com/profissional/)
 
@@ -53,15 +49,15 @@ width="25%"}](https://stars.github.com/profiles/beatrizmilz/)</center>
 
 ## Plano para hoje
 
-- Conceitos importantes para entender o Shiny
+-   Conceitos importantes para entender o Shiny
 
-- O que é o Shiny?
+-   O que é o Shiny?
 
-- Estrutura básica
+-   Estrutura básica
 
-- Exemplo com prática usando ChatGPT
+-   Exemplo com prática usando ChatGPT
 
-- Disponilibização do app no shinyapps.io
+-   Disponilibização do app no shinyapps.io
 
 ## Ciclo da Ciência de Dados
 
@@ -71,13 +67,14 @@ width="25%"}](https://stars.github.com/profiles/beatrizmilz/)</center>
 Fonte: Allison Horst (@allison_horst).
 :::
 
-
 ## Conceito importante: páginas da internet
 
 ![](images/estrutura-pagina.webp){fig-align="center"}
 
 ::: footer
-Fonte: [Free Code Camp - The relationship between HTML, CSS and JavaScript explained by building a city](https://www.freecodecamp.org/news/the-relationship-between-html-css-and-javascript-explained-by-building-a-city-a73a69c6343/)
+Fonte: [Free Code Camp - The relationship between HTML, CSS and
+JavaScript explained by building a
+city](https://www.freecodecamp.org/news/the-relationship-between-html-css-and-javascript-explained-by-building-a-city-a73a69c6343/)
 :::
 
 ## Conceito importante: Interatividade
@@ -85,7 +82,8 @@ Fonte: [Free Code Camp - The relationship between HTML, CSS and JavaScript expla
 ![](images/interatividade.png){fig-align="center"}
 
 ::: incremental
--   É interessante conseguir identificar a interatividade que vem do JavaScript e a interatividade feita com código em R.
+-   É interessante conseguir identificar a interatividade que vem do
+    JavaScript e a interatividade feita com código em R.
 :::
 
 ::: footer
@@ -94,25 +92,35 @@ Fonte: Elaborado pela autora.
 
 ## RMarkdown e Quarto
 
--   O arquivo gerado é **estático**, não depende de uma sessão de R para ser aberto.
+-   O arquivo gerado é **estático**, não depende de uma sessão de R para
+    ser aberto.
 
--   Os elementos adicionados podem ter algum nível de interatividade (como mapas, gráficos, tabelas) utilizando bibliotecas em JavaScript.
+-   Os elementos adicionados podem ter algum nível de interatividade
+    (como mapas, gráficos, tabelas) utilizando bibliotecas em
+    JavaScript.
 
-- Exemplos:
-   - Mapas: [Leaflet](https://rstudio.github.io/leaflet/), [tmap](https://r-tmap.github.io/tmap/)
-   - Gráficos: [Plotly](https://plotly.com/r/), [echarts4r](https://echarts4r.john-coene.com/)
-   - Tabelas: [DT](https://rstudio.github.io/DT/), [reactable](https://glin.github.io/reactable/)
-   
+-   Exemplos:
+
+    -   Mapas: [Leaflet](https://rstudio.github.io/leaflet/),
+        [tmap](https://r-tmap.github.io/tmap/)
+    -   Gráficos: [Plotly](https://plotly.com/r/),
+        [echarts4r](https://echarts4r.john-coene.com/)
+    -   Tabelas: [DT](https://rstudio.github.io/DT/),
+        [reactable](https://glin.github.io/reactable/)
 
 ## Shiny
 
-- Shiny é um pacote em R para criar **dashboards interativos** com R.
+-   Shiny é um pacote em R para criar **dashboards interativos** com R.
 
-- Melhor dos mundos para interatividade: podemos utilizar elementos que são interativos devido ao JS, e também podemos apresentar conteúdos interativos utilizando R.
+-   Melhor dos mundos para interatividade: podemos utilizar elementos
+    que são interativos devido ao JS, e também podemos apresentar
+    conteúdos interativos utilizando R.
 
-- Necessita de uma sessão de R para que seja aberto!
+-   Necessita de uma sessão de R para que seja aberto!
 
-- É possível fazer dashboards para usos científicos. Ex: Zootraits ([dashboard](https://ecofun.shinyapps.io/zootraits/) e [artigo](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.11334))
+-   É possível fazer dashboards para usos científicos. Ex: Zootraits
+    ([dashboard](https://ecofun.shinyapps.io/zootraits/) e
+    [artigo](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.11334))
 
 ![](images/shiny.png){fig-align="center" width="50%"}
 
@@ -120,39 +128,92 @@ Fonte: Elaborado pela autora.
 Fonte: <https://rstudio.com/shiny/>
 :::
 
-## Shiny - Servidor e Interface do Usuário
+# Shiny
+
+## Componentes básicos - Servidor e Interface do Usuário
 
 ![](images/esquema_ui_servidor.png){fig-align="center" width="50%"}
 
 ::: footer
-Fonte: <https://curso-r.github.io/main-dashboards/slides/02-shiny-introducao.html>
+Fonte:
+<https://curso-r.github.io/main-dashboards/slides/02-shiny-introducao.html>
 :::
 
+## Estrutura básica de um app Shiny
 
+Dica: usar um snippet para criar a estrutura básica do app Shiny. Salve
+o arquivo com a extensão `.R`.
+
+![](images/snippet.gif)
+
+## Estrutura básica de um app Shiny
+
+```{r}
+#| eval: false
+library(shiny)
+
+ui <- fluidPage(
+  
+)
+
+server <- function(input, output, session) {
+  
+}
+
+shinyApp(ui, server)
+```
+
+Após salvar o arquivo, você pode clicar no botão "Run App" para que o app seja executado.
+
+Obs: O app gerado por este código estará vazio!
+
+## Inputs e Outputs
+
+-   **Inputs**: São os elementos que permitem ao usuário interagir com o app. Exemplo: botões, caixas de seleção, campos de texto.
+
+-   **Outputs**: São os elementos que exibem informações ao usuário. Exemplo: gráficos, tabelas, textos.
+
+
+## Vamos identificar os inputs e outputs?
+
+[![](images/exemplo-etec.png){fig-align="center" width="100%"}](https://beatriz-milz.shinyapps.io/etec/)
+
+## Criando um arquivo de exemplo
+
+
+![](images/new-app.mp4){fig-align="center" width="100%"}
 
 
 # Encerramento
 
 ## Materiais para estudar mais: Exemplos em R
 
-- [Livro Mastering Shiny - Hadley Wickham](https://mastering-shiny.org) (em inglês)
+-   [Livro Mastering Shiny - Hadley
+    Wickham](https://mastering-shiny.org) (em inglês)
 
-- [Livro Programando em Shiny - William Amorim](https://programando-em-shiny.curso-r.com/) (em português)
+-   [Livro Programando em Shiny - William
+    Amorim](https://programando-em-shiny.curso-r.com/) (em português)
 
-- [Curso de Shiny - Curso-R + William Amorim](https://hotmart.com/pt-br/marketplace/produtos/dashboards-em-shiny/C94374621I) (em português)
+-   [Curso de Shiny - Curso-R + William
+    Amorim](https://hotmart.com/pt-br/marketplace/produtos/dashboards-em-shiny/C94374621I)
+    (em português)
 
+-   [Materiais da
+    Curso-R](https://github.com/curso-r/main-dashboards/tree/master)
 
 ## Muito obrigada!
 
+-   Email: [milz.bea\@gmail.com](mailto:milz.bea@gmail.com)
+-   GitHub: [\@beatrizmilz](https://github.com/beatrizmilz)
+-   Instagram:
+    [\@dadoseambiente](https://www.instagram.com/dadoseambiente/)
+-   Youtube: [\@beamilz](https://www.youtube.com/@beamilz)
 
-- Email: [milz.bea@gmail.com](mailto:milz.bea@gmail.com)
-- GitHub: [@beatrizmilz](https://github.com/beatrizmilz)
-- Instagram: [@dadoseambiente](https://www.instagram.com/dadoseambiente/)
-- Youtube: [@beamilz](https://www.youtube.com/@beamilz)
+Na minha página pessoal, você encontra [meus
+contatos](https://beamilz.com/about-pt), e também [palestras (anteriores
+e futuras)](https://beamilz.com/content).
 
-
-
-
-Na minha página pessoal, você encontra [meus contatos](https://beamilz.com/about-pt), e também [palestras (anteriores e futuras)](https://beamilz.com/content).
-
-Slides feitos com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Você pode consultar o código [aqui](https://github.com/beatrizmilz/2025-03-pyladies-odd-geobr/blob/main/index.qmd).
+Slides feitos com
+[Quarto](https://quarto.org/docs/presentations/revealjs/index.html).
+Você pode consultar o código
+[aqui](https://github.com/beatrizmilz/2025-03-pyladies-odd-geobr/blob/main/index.qmd).
