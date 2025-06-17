@@ -13,6 +13,7 @@ format:
     code-link: true
     code-copy: true
     scrollable: true
+    logo: "logo.png"
 incremental: false
 editor: 
   markdown: 
