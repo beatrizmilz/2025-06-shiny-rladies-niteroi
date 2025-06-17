@@ -199,6 +199,9 @@ shinyWidgets::shinyWidgetsGallery()
 
 ## Prática: Criando um app Shiny com o ChatGPT
 
+
+- [Tabela que utilizaremos](https://github.com/beatrizmilz/etec/blob/main/shinyapps/dados-etec.csv)
+
 - [Prompt disponível aqui](https://raw.githubusercontent.com/beatrizmilz/2025-06-shiny-rladies-niteroi/refs/heads/main/prompts/shiny.md)
 
 ```{md}
