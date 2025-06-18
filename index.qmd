@@ -179,6 +179,8 @@ Obs: O app gerado por este código estará vazio!
 
 [![](images/exemplo-etec.png){fig-align="center" width="100%"}](https://beatriz-milz.shinyapps.io/etec/)
 
+Acesse o [código](https://github.com/beatrizmilz/etec/blob/main/shinyapps/app.R) e o [app](https://beatriz-milz.shinyapps.io/etec/).
+
 ## Inputs
 
 - [Shiny Widget Gallery](https://shiny.posit.co/r/gallery/widgets/widget-gallery/) (inputs do pacote `shiny`)
